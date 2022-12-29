@@ -29,7 +29,7 @@ object ApiModule {
             .addInterceptor(logging)
             .build()
     }
-
+    //request ke webservise dan parsing
     @Provides
     @Singleton
     fun provideRetrofit(client: OkHttpClient): Retrofit {

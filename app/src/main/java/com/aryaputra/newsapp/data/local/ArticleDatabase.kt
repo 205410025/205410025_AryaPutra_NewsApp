@@ -8,7 +8,7 @@ import com.aryaputra.newsapp.di.ApplicationScope
 import kotlinx.coroutines.CoroutineScope
 import javax.inject.Inject
 import javax.inject.Provider
-//class sebagai RoomDatabase.
+//room data base
 @Database(entities = [Article::class], version = 2)
 @TypeConverters(Converters::class)
 abstract class ArticleDatabase : RoomDatabase() {

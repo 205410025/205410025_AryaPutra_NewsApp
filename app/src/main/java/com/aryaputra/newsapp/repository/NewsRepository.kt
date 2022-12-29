@@ -7,7 +7,7 @@ import com.aryaputra.newsapp.data.remote.NewsApi
 import retrofit2.Response
 import javax.inject.Inject
 import javax.inject.Singleton
-
+//repository untuk mengambil article dan menyimpanya secara offline
 @Singleton
 class NewsRepository @Inject constructor(
     private val newsApi: NewsApi,

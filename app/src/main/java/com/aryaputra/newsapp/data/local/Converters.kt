@@ -2,7 +2,7 @@ package com.aryaputra.newsapp.data.local
 
 import androidx.room.TypeConverter
 import com.aryaputra.newsapp.data.model.Source
-//class converters
+//class converters untuk mengconvert data
 class Converters {
 
     @TypeConverter

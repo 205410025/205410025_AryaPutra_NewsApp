@@ -8,19 +8,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.aryaputra.newsapp.data.model.Article
 import com.aryaputra.newsapp.databinding.ItemArticlePreviewBinding
-
+//class ArticlesAdapter menghubungkan data ke tampilan
 class ArticlesAdapter(private val listener: OnItemClickListener): ListAdapter<Article, ArticlesAdapter.ArticleViewHolder>(DiffCallback()) {
-    //membuat tampilan
+    //binding ViewHolder
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticleViewHolder {
         val binding = ItemArticlePreviewBinding.inflate(LayoutInflater.from(parent.context), parent,false)
         return ArticleViewHolder(binding)
     }
-    //
+
     override fun onBindViewHolder(holder: ArticleViewHolder, position: Int) {
         val currentItem = getItem(position)
         holder.bind(currentItem)
     }
-
+    //memuat tampilan
     inner class ArticleViewHolder(private val binding: ItemArticlePreviewBinding): RecyclerView.ViewHolder(binding.root) {
         init {
             binding.apply {

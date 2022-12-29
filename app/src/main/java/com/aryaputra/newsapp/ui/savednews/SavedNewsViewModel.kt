@@ -9,15 +9,15 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+//class savedNewsViewModel
 @HiltViewModel
 class SavedNewsViewModel @Inject constructor(
     private val newsRepository: NewsRepository
 ) : ViewModel() {
-
+    //pengambilan data
     private val savedArticleEventChannel = Channel<SavedArticleEvent>()
     val savedArticleEvent = savedArticleEventChannel.receiveAsFlow()
-
+    //mengambil article yang tersimpan
     fun getAllArticles() = newsRepository.getAllArticles()
 
     fun onArticleSwiped(article: Article) {

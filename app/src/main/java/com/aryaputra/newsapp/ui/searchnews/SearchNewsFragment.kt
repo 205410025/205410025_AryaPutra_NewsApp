@@ -26,13 +26,13 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-
+//mengatur tata letak tampilan
 private const val TAG = "SearchNewsFragment"
 
 @AndroidEntryPoint
 class SearchNewsFragment : Fragment(R.layout.fragment_search_news),
     ArticlesAdapter.OnItemClickListener {
-
+    //memanggil SearchNewsViewModel
     private val viewModel: SearchNewsViewModel by viewModels()
     var isLoading = false
     var isLastPage = false

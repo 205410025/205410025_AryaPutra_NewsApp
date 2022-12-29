@@ -18,7 +18,7 @@ import com.aryaputra.newsapp.util.QUERY_PAGE_SIZE
 import com.aryaputra.newsapp.util.Resource
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_breaking_news.*
-
+//mengatur tata letak tampilan
 private const val TAG = "BreakingNewsFragment"
 @AndroidEntryPoint
 class BreakingNewsFragment : Fragment(R.layout.fragment_breaking_news), ArticlesAdapter.OnItemClickListener {

@@ -14,21 +14,21 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
 import javax.inject.Inject
-
+//class SearchNewsViewModel
 @HiltViewModel
 class SearchNewsViewModel @Inject constructor(
     private val newsRepository: NewsRepository,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
-
+    //pengambilan data article
     val searchNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var searchNewsResponse: NewsResponse? = null
     var searchNewsPage = 1
-
+    //pencarian article
     fun searchNews(searchQuery: String) = viewModelScope.launch {
         safeSearchNewCall(searchQuery, searchNewsPage)
     }
-
+    //cek artikel baik online maupun offline
     private suspend fun safeSearchNewCall(searchQuery: String, searchNewsPage: Int){
         searchNews.postValue(Resource.Loading())
         try{

@@ -9,7 +9,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+//class ArticleViewModel
 @HiltViewModel
 class ArticleViewModel @Inject constructor(
     private val newsRepository: NewsRepository

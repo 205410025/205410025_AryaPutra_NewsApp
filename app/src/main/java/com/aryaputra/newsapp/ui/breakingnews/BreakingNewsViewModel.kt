@@ -14,21 +14,21 @@ import kotlinx.coroutines.launch
 import retrofit2.Response
 import java.io.IOException
 import javax.inject.Inject
-
+//class BrakingNewsViewModel
 @HiltViewModel
 class BreakingNewsViewModel @Inject constructor(
     private val newsRepository: NewsRepository,
     @ApplicationContext private val context: Context
 ) : ViewModel() {
-
+    //pengambilan data article
     val breakingNews: MutableLiveData<Resource<NewsResponse>> = MutableLiveData()
     var breakingNewsPage = 1
     var breakingNewsResponse: NewsResponse? = null
-
+    //tampilan pertama
     init {
         getBreakingNews("id")
     }
-
+    //tampilan berdasarkan kode negara
     fun getBreakingNews(countryCode: String) = viewModelScope.launch {
         safeBreakingNewsCall(countryCode)
     }

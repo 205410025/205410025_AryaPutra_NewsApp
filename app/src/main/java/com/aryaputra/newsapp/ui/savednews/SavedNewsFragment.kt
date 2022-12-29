@@ -15,7 +15,7 @@ import com.aryaputra.newsapp.data.model.Article
 import com.aryaputra.newsapp.databinding.FragmentSavedNewsBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
-
+//mengatur tata letak tampilan
 @AndroidEntryPoint
 class SavedNewsFragment : Fragment(R.layout.fragment_saved_news),
     ArticlesAdapter.OnItemClickListener {

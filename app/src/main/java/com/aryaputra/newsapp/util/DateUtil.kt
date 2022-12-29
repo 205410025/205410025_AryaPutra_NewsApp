@@ -2,9 +2,9 @@ package com.aryaputra.newsapp.util
 
 import java.text.SimpleDateFormat
 import java.util.*
-
+//class DateUtil
 class DateUtil{
-
+    //pengaturan tanggal dan waktu
     companion object{
         fun changeDateFormat(strDate: String?): String {
             if(strDate.isNullOrEmpty()){
